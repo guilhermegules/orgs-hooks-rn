@@ -16,7 +16,7 @@ const Header: FC = () => {
     getHeader().then(headerConfig => {
       setHeader(headerConfig);
     });
-  }, [header]);
+  }, []);
 
   return (
     <View style={styles.header}>

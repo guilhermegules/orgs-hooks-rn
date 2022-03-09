@@ -1,7 +1,7 @@
 export interface Client {
   name: string;
   image: any;
-  distance: string;
+  distance: number;
   stars: number;
   id: number;
 }

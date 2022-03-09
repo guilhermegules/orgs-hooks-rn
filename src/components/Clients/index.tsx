@@ -1,23 +1,15 @@
-import React, { FC, useEffect, useState } from 'react';
-import { FlatList, Image, StyleSheet, Text, View } from 'react-native';
+import React, { FC } from 'react';
+import { FlatList, StyleSheet, Text } from 'react-native';
+import useClients from '../../hooks/useClients';
 
-import { Client } from '../../interfaces/client.model';
-import { getClients } from '../../services/loadFakeData';
+import ClientCard from '../ClientCard';
 
 interface ClientsProps {
   header: FC;
 }
 
 const Clients: FC<ClientsProps> = ({ header: Header }) => {
-  const [clients, setClients] = useState<Client[]>([]);
-  const [title, setTitle] = useState<string>();
-
-  useEffect(() => {
-    getClients().then(response => {
-      setClients(response.list as Client[]);
-      setTitle(response.title);
-    });
-  }, []);
+  const { title, clients } = useClients();
 
   const listHeader = () => {
     return (
@@ -33,16 +25,9 @@ const Clients: FC<ClientsProps> = ({ header: Header }) => {
       data={clients}
       keyExtractor={client => `${client?.id}`}
       ListHeaderComponent={listHeader}
-      renderItem={({ item }) => (
-        <View>
-          <Image source={item?.image} />
-          <View>
-            <Text>{item?.name}</Text>
-            <Text>{item?.stars}</Text>
-          </View>
-          <Text>{item?.distance}</Text>
-        </View>
-      )}
+      renderItem={({ item }) => {
+        return item ? <ClientCard client={item} /> : null;
+      }}
     />
   );
 };
