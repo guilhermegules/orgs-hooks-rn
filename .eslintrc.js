@@ -5,7 +5,7 @@ module.exports = {
   plugins: ['react', '@typescript-eslint', 'react-hooks', 'prettier'],
   overrides: [
     {
-      files: ['*.ts', '*.tsx'],
+      files: ['*.ts', '*.tsx', '*.js', '*.jsx'],
       rules: {
         '@typescript-eslint/no-shadow': ['error'],
         'no-shadow': 'off',

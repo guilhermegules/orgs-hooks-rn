@@ -19,7 +19,7 @@ const ClientCard: FC<ClientCardProps> = ({ client }) => {
   );
 
   return (
-    <TouchableOpacity style={styles.card} onPress={invertSelection}>
+    <TouchableOpacity testID="client-card" style={styles.card} onPress={invertSelection}>
       <Image style={styles.cardImage} source={client?.image} accessibilityLabel={client?.name} />
       <View style={styles.information}>
         <View>

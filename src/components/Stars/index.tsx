@@ -14,6 +14,7 @@ const Stars: FC<StarsProps> = ({ quantity: originalQuantity, editable = true, bi
   const starRender = () =>
     Array.from({ length: 5 }, (_, index) => (
       <Star
+        testID={`star-${index}`}
         key={index}
         onPress={() => setQuantity(index + 1)}
         disabled={!editable}

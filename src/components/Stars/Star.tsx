@@ -9,9 +9,16 @@ interface StarProps {
   disabled?: boolean;
   filled: boolean;
   bigger?: boolean;
+  testID?: string;
 }
 
-const Star: FC<StarProps> = ({ onPress, disabled = true, filled, bigger = false }) => {
+const Star: FC<StarProps> = ({
+  onPress,
+  disabled = true,
+  filled,
+  bigger = false,
+  testID = 'star-touchable-opacity',
+}) => {
   const styles = stylesHandler(bigger);
 
   const getStar = () => {
@@ -23,8 +30,8 @@ const Star: FC<StarProps> = ({ onPress, disabled = true, filled, bigger = false 
   };
 
   return (
-    <TouchableOpacity onPress={onPress} disabled={disabled}>
-      <Image style={styles.star} source={getStar()} />
+    <TouchableOpacity testID={testID} onPress={onPress} disabled={disabled}>
+      <Image testID="star-image" style={styles.star} source={getStar()} />
     </TouchableOpacity>
   );
 };
