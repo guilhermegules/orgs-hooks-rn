@@ -9,7 +9,7 @@ const randomNumber = (min: number, max: number) => {
   return Math.floor(Math.random() * (max - min + 1) + min);
 };
 
-const clients: {title: string, list: Client[]} = {
+const clients: { title: string; list: Client[] } = {
   title: 'Produtores',
   list: [
     {
