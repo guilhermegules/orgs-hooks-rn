@@ -23,10 +23,6 @@ yarn test or npm test # for run unit tests
 ```
 
 ```bash
-yarn e2e or npm run e2e # for run e2e tests
-```
-
-```bash
 yarn lint or npm run lint # for run application linting
 ```
 
@@ -44,5 +40,15 @@ yarn lint or npm run lint # for run application linting
   <p><a href="https://eslint.org/">ESLint</a></p>
   <p><a href="https://prettier.io/">Prettier</a></p>
   <p><a href="https://jestjs.io/">Jest</a></p>
-  <p><a href="https://wix.github.io/Detox/">Detox</a></p>
+  <p><a href="https://testing-library.com/docs/">Testing library</a></p>
+</div>
+
+<div align="center">
+  <h2>:heavy_check_mark: Useful links</h2>
+
+  <p><a href="https://reactnativetesting.io/component/setup.html#installing-react-native-testing-library">Installing react native testing library</a></p>
+
+  <p><a href="https://chanonroy.medium.com/mocking-hooks-for-testing-with-jest-and-react-testing-library-d34505616d12">Mocking hooks for testing with jest and react testing library</a></p>
+  
+  <p><a href="https://keyholesoftware.com/2020/11/30/using-jest-and-testing-library-with-react-native-part-v-styles-testing" />Using jest and testing library with react native</a></p>
 </div>
